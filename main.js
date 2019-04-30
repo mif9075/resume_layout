@@ -1,7 +1,7 @@
 window.onload = init;
 
-// Global Variable
-let isPortfolio = false;
+// // Global Variable
+// let isPortfolio = false;
 
 //Function to Initialize
 function init() {
@@ -9,9 +9,9 @@ function init() {
     // addClick('#toggle', togglePortfolioandExp);
 
     displayBio();
-    displayIntro();
     displaySocialMedia();
-
+    displayIntro();
+    
     displayCert();
     displayLanguages();
     displaySkills();
@@ -32,7 +32,7 @@ function init() {
 
 //Bio, Intro, Display Social Media; Doesn't change when toggling.
 function displayBio() {
-    const bioUl = document.querySelector('#bio');
+    const bioUl = document.querySelector('#about');
 
     const bioData = document.createElement('ul');
     bioUl.appendChild(bioData);
