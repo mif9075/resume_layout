@@ -5,6 +5,9 @@ body{
 img {
     width: 60%;
     height: auto;
-    
+}
+
+nav {
+    height: 100%;
 }
 
