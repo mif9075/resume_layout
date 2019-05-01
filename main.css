@@ -1,16 +1,7 @@
-
+/* CSS for Nav Bar*/
 body {
     font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     padding-top: 54px;
-  }
-  
-  
-
-  @media (min-width: 992px) {
-    body {
-      padding-top: 0;
-      padding-left: 17rem;
-    }
   }
   
   #sideNav .navbar-nav .nav-item .nav-link {
@@ -18,19 +9,28 @@ body {
     letter-spacing: 0.05rem;
     text-transform: uppercase;
   }
-  
-  #sideNav .navbar-toggler:focus {
-    outline-color: #d48a6e;
+
+  .bg-primary {
+    background-color: blue !important;
   }
   
+  .text-primary {
+    color:blue !important;
+  }
+  
+
+  /* Media Query for Nav Bar*/
   @media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: 17rem;
+      }
+
     #sideNav {
       text-align: center;
       position: fixed;
       top: 0;
       left: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -41,8 +41,6 @@ body {
     }
     
     #sideNav .navbar-brand {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       margin: auto auto 0;
       padding: 0.5rem;
@@ -53,8 +51,6 @@ body {
       border: 0.5rem solid rgba(255, 255, 255, 0.2);
     }
     #sideNav .navbar-collapse {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       -webkit-box-align: start;
       -ms-flex-align: start;
@@ -80,11 +76,7 @@ body {
     }
   }
   
-  .bg-primary {
-    background-color: blue !important;
-  }
-  
-  .text-primary {
-    color:blue !important;
-  }
+  h1 { 
+    font-size: 400% 
+    } 
   

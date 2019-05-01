@@ -3,7 +3,7 @@ window.onload = init;
 //Function to Initialize
 function init() {
 
-    displayBio();
+    // displayBio();
     displaySocialMedia();
     displayIntro();
     
@@ -27,7 +27,7 @@ function init() {
 
 //Bio, Intro, Display Social Media//
 function displayBio() {
-    const bioUl = document.querySelector('#about');
+    const bioUl = document.querySelector('#about-Not In Use');
 
     const bioData = document.createElement('ul');
     bioUl.appendChild(bioData);
