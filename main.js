@@ -4,7 +4,7 @@ window.onload = init;
 function init() {
 
     // displayBio();
-    displaySocialMedia();
+    // displaySocialMedia();
     displayIntro();
     
     displayCert();
@@ -27,7 +27,7 @@ function init() {
 
 //Bio, Intro, Display Social Media//
 function displayBio() {
-    const bioUl = document.querySelector('#about-Not In Use');
+    const bioUl = document.querySelector('#about');
 
     const bioData = document.createElement('ul');
     bioUl.appendChild(bioData);
@@ -47,25 +47,25 @@ function displayBio() {
     bioUl.style.fontSize = "large";
 }
 
-function displaySocialMedia() {
-    const socialUl = document.querySelector('#social_media');
-    document.querySelector("#social_media").style.fontSize = "large";
+// function displaySocialMedia() {
+//     const socialUl = document.querySelector('#social_media');
+//     document.querySelector("#social_media").style.fontSize = "large";
 
-    const socialData = document.createElement('ul');
-    socialUl.appendChild(socialData);
+//     const socialData = document.createElement('ul');
+//     socialUl.appendChild(socialData);
 
-    const email = document.createElement('p');
-    email.innerText = `Email: ${data.profile[1].email}`;
-    socialData.appendChild(email);
+//     const email = document.createElement('p');
+//     email.innerText = `Email: ${data.profile[1].email}`;
+//     socialData.appendChild(email);
 
-    const phone = document.createElement('p');
-    phone.innerText = `Phone: ${data.profile[1].phone}`;
-    socialData.appendChild(phone);
+//     const phone = document.createElement('p');
+//     phone.innerText = `Phone: ${data.profile[1].phone}`;
+//     socialData.appendChild(phone);
 
-    const git = document.createElement('p');
-    git.innerText = `Github: ${data.profile[1].github}`;
-    socialData.appendChild(git);
-}
+//     const git = document.createElement('p');
+//     git.innerText = `Github: ${data.profile[1].github}`;
+//     socialData.appendChild(git);
+// }
 
 
 function displayIntro() {
@@ -99,6 +99,7 @@ function displayExperience(experience) {
 
     const title = document.createElement('p');
     title.innerText = `Position: ${experience.title}`;
+    title.style.fontWeight = "bold";
     experienceData.appendChild(title);
 
     const year = document.createElement('p');
@@ -129,6 +130,7 @@ function displayEducation(education) {
 
     const degree = document.createElement('p');
     degree.innerText = `Degree: ${education.degree}`;
+    degree.style.fontWeight = "bold";
     educationData.appendChild(degree);
 
     const year = document.createElement('p');
@@ -213,6 +215,7 @@ function displayPortfolio() {
 
         const name = document.createElement('p');
         name.innerText = `Name of Project: ${data.project[i].name}`;
+        name.style.fontWeight = "bold";
         projectData.appendChild(name);
 
         const date = document.createElement('p');
