@@ -69,6 +69,7 @@ function displayBio() {
 
 
 function displayIntro() {
+
     const introUl = document.querySelector('#intro');
     document.querySelector("#intro").style.fontSize = "large";
 
@@ -99,7 +100,7 @@ function displayExperience(experience) {
 
     const title = document.createElement('p');
     title.innerText = `Position: ${experience.title}`;
-    title.style.fontWeight = "bold";
+    title.classList.add('header');
     experienceData.appendChild(title);
 
     const year = document.createElement('p');
@@ -130,7 +131,7 @@ function displayEducation(education) {
 
     const degree = document.createElement('p');
     degree.innerText = `Degree: ${education.degree}`;
-    degree.style.fontWeight = "bold";
+    degree.classList.add('header');
     educationData.appendChild(degree);
 
     const year = document.createElement('p');
@@ -215,7 +216,7 @@ function displayPortfolio() {
 
         const name = document.createElement('p');
         name.innerText = `Name of Project: ${data.project[i].name}`;
-        name.style.fontWeight = "bold";
+        name.classList.add('header');
         projectData.appendChild(name);
 
         const date = document.createElement('p');
@@ -246,7 +247,7 @@ function displayPortfolio() {
     
             const name = document.createElement('p');
             name.innerText = `Name of Project: ${data.project[j].name}`;
-            name.style.fontWeight = "bold";
+            name.classList.add('header');
             projectData.appendChild(name);
     
             const date = document.createElement('p');
