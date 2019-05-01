@@ -206,9 +206,9 @@ function displayLanguages() {
 //Display Portfolio
 function displayPortfolio() {
 
-    for (let i = 0; i < data.project.length; i++) {
+    for (let i = 0; i < data.project.length/2; i++) {
 
-        const projectUl = document.querySelector('#project');
+        const projectUl = document.querySelector('#project1');
         
         const projectData = document.createElement('ul');
         projectUl.appendChild(projectData);
@@ -236,7 +236,37 @@ function displayPortfolio() {
         projectData.appendChild(space);
 
     }
-    // projectData.innerText = 'PORTFOLIO';
+
+        for (let j = 7; j < data.project.length; j++) {
+
+            const projectUl = document.querySelector('#project2');
+            
+            const projectData = document.createElement('ul');
+            projectUl.appendChild(projectData);
+    
+            const name = document.createElement('p');
+            name.innerText = `Name of Project: ${data.project[j].name}`;
+            name.style.fontWeight = "bold";
+            projectData.appendChild(name);
+    
+            const date = document.createElement('p');
+            date.innerText = `Date Project Started: ${data.project[j].date}`;
+            projectData.appendChild(date);
+    
+            const description = document.createElement('p');
+            description.innerText = `Project Description: ${data.project[j].description}`;
+            projectData.appendChild(description);
+    
+            const website = document.createElement('p');
+            website.innerText = `Github: ${data.project[j].website}`;
+            projectData.appendChild(website);
+    
+            // Make space between projects
+            const space = document.createElement('br');
+            space.InnerText = '';
+            projectData.appendChild(space);
+
+    }
 }
 
 
@@ -246,40 +276,40 @@ function addClick(selector, func) {
         .addEventListener('click', func);
 }
 
-function clearList() {
-    event.preventDefault();
-    removeAllChildrenOfOl();
-}
+// function clearList() {
+//     event.preventDefault();
+//     removeAllChildrenOfOl();
+// }
 
-function removeAllChildrenOfOl() {
+// function removeAllChildrenOfOl() {
 
-    const ul = document.querySelector('#experience');
+//     const ul = document.querySelector('#experience');
 
-    while (ul.hasChildNodes()) {
-        ul.removeChild(ul.firstChild);
-    }
+//     while (ul.hasChildNodes()) {
+//         ul.removeChild(ul.firstChild);
+//     }
 
-    const ol = document.querySelector('#education');
+//     const ol = document.querySelector('#education');
 
-    while (ol.hasChildNodes()) {
-        ol.removeChild(ol.firstChild);
-    }
+//     while (ol.hasChildNodes()) {
+//         ol.removeChild(ol.firstChild);
+//     }
 
-    const ol2 = document.querySelector('#skills');
+//     const ol2 = document.querySelector('#skills');
 
-    while (ol2.hasChildNodes()) {
-        ol2.removeChild(ol2.firstChild);
-    }
+//     while (ol2.hasChildNodes()) {
+//         ol2.removeChild(ol2.firstChild);
+//     }
 
-    const ol3 = document.querySelector('#cert');
+//     const ol3 = document.querySelector('#cert');
 
-    while (ol3.hasChildNodes()) {
-        ol3.removeChild(ol3.firstChild);
-    }
+//     while (ol3.hasChildNodes()) {
+//         ol3.removeChild(ol3.firstChild);
+//     }
 
-    const ol4 = document.querySelector('#language');
+//     const ol4 = document.querySelector('#language');
 
-    while (ol4.hasChildNodes()) {
-        ol4.removeChild(ol4.firstChild);
-    }
-}
+//     while (ol4.hasChildNodes()) {
+//         ol4.removeChild(ol4.firstChild);
+//     }
+// }
