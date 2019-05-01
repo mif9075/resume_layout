@@ -2,15 +2,10 @@ window.onload = init;
 
 //Function to Initialize
 function init() {
-
-    // displayBio();
-    // displaySocialMedia();
     displayIntro();
-    
     displayCert();
     displayLanguages();
     displaySkills();
-    
 
     for (let i = 0; i < data.education.length; i++) {
         displayEducation(data.education[i]);
@@ -21,9 +16,7 @@ function init() {
     }
 
     displayPortfolio();
-
 }
-
 
 //Bio, Intro, Display Social Media//
 function displayBio() {
@@ -46,27 +39,6 @@ function displayBio() {
 
     bioUl.style.fontSize = "large";
 }
-
-// function displaySocialMedia() {
-//     const socialUl = document.querySelector('#social_media');
-//     document.querySelector("#social_media").style.fontSize = "large";
-
-//     const socialData = document.createElement('ul');
-//     socialUl.appendChild(socialData);
-
-//     const email = document.createElement('p');
-//     email.innerText = `Email: ${data.profile[1].email}`;
-//     socialData.appendChild(email);
-
-//     const phone = document.createElement('p');
-//     phone.innerText = `Phone: ${data.profile[1].phone}`;
-//     socialData.appendChild(phone);
-
-//     const git = document.createElement('p');
-//     git.innerText = `Github: ${data.profile[1].github}`;
-//     socialData.appendChild(git);
-// }
-
 
 function displayIntro() {
 
@@ -93,10 +65,8 @@ function displayIntro() {
 function displayExperience(experience) {
     const experienceUl = document.querySelector('#experience');
 
-    // const experienceLi = document.createElement('li');
     const experienceData = document.createElement('ul');
     experienceUl.appendChild(experienceData);
-    // experienceUl.appendChild(experienceLi);
 
     const title = document.createElement('p');
     title.innerText = `Position: ${experience.title}`;
@@ -124,10 +94,8 @@ function displayExperience(experience) {
 function displayEducation(education) {
     const educationUl = document.querySelector('#education');
 
-    // const educationLi = document.createElement('li');
     const educationData = document.createElement('ul');
     educationUl.appendChild(educationData);
-    // educationUl.appendChild(educationLi);
 
     const degree = document.createElement('p');
     degree.innerText = `Degree: ${education.degree}`;
@@ -276,41 +244,3 @@ function addClick(selector, func) {
     document.querySelector(selector)
         .addEventListener('click', func);
 }
-
-// function clearList() {
-//     event.preventDefault();
-//     removeAllChildrenOfOl();
-// }
-
-// function removeAllChildrenOfOl() {
-
-//     const ul = document.querySelector('#experience');
-
-//     while (ul.hasChildNodes()) {
-//         ul.removeChild(ul.firstChild);
-//     }
-
-//     const ol = document.querySelector('#education');
-
-//     while (ol.hasChildNodes()) {
-//         ol.removeChild(ol.firstChild);
-//     }
-
-//     const ol2 = document.querySelector('#skills');
-
-//     while (ol2.hasChildNodes()) {
-//         ol2.removeChild(ol2.firstChild);
-//     }
-
-//     const ol3 = document.querySelector('#cert');
-
-//     while (ol3.hasChildNodes()) {
-//         ol3.removeChild(ol3.firstChild);
-//     }
-
-//     const ol4 = document.querySelector('#language');
-
-//     while (ol4.hasChildNodes()) {
-//         ol4.removeChild(ol4.firstChild);
-//     }
-// }
