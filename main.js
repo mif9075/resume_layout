@@ -112,6 +112,11 @@ function displayExperience(experience) {
     const address = document.createElement('p');
     address.innerText = `Address: ${experience.address}`;
     experienceData.appendChild(address);
+
+    // Make space between experience
+    const space = document.createElement('br');
+    space.InnerText = '';
+    experienceData.appendChild(space);
 }
 
 function displayEducation(education) {
@@ -137,6 +142,12 @@ function displayEducation(education) {
     const address = document.createElement('p');
     address.innerText = `Address: ${education.address}`;
     educationData.appendChild(address);
+
+    // Make space between education
+    const space = document.createElement('br');
+    space.InnerText = '';
+    educationData.appendChild(space);
+
 }
 
 function displaySkills() {
