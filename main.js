@@ -215,6 +215,12 @@ function displayPortfolio() {
         const website = document.createElement('p');
         website.innerText = `Github: ${data.project[i].website}`;
         projectData.appendChild(website);
+
+        // Make space between projects
+        const space = document.createElement('br');
+        space.InnerText = '';
+        projectData.appendChild(space);
+
     }
     // projectData.innerText = 'PORTFOLIO';
 }
